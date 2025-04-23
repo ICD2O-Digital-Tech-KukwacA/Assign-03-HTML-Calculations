@@ -1,9 +1,89 @@
+<!--Assign-03-HTML-Calculations-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <!--Metadata-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Speed of light in different mediums" />
+    <meta name="keywords" content="immaculata, icd2o" />
+    <meta name="author" content="Kukwac" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicons/favicon-32x32.png" />
+    <link rel="manifest" href="./Favicons/site.webmanifest" />
+    <!--MDL stylesheets-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--Title-->
+    <title>Speed of Light</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <!--Web page content with a Javascript file and MDL components-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Speed of Light</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <h2>Formula</h2>
+              <h3>v = c/n<h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <h6>Speed of light in diamond</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="float"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="diamond"
+            />
+            <label class="mdl-textfield__label" for="index-of-refraction">Index of refraction(n) ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+				
+        <!-- Simple Textfield -->
+        <form action="#">
+          <h6>Speed of light in water</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="float"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="water"
+            />
+            <label class="mdl-textfield__label" for="index-of-refraction-of-water">Index of refraction(n) ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <p>
+          <div id="speed">
+          </div>
+          <div id="speed2">
+          </div>
+        </p>
+      </main>
+    </div>
   </body>
 </html>
